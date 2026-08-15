@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NexaVault | Gold, XRP & XAB Knowledge Hub</title>
+<meta name="description" content="NexaVault combines Gold and XRP educational guides with an XAB ecosystem briefing, process overview, package path, rewards structure and verification resources.">
+<style>
+:root{--bg:#07101b;--bg2:#0b1726;--card:#0e1d2d;--card2:#12263a;--text:#edf5ff;--muted:#9eb0c5;--cyan:#39d9ff;--gold:#e7bb61;--green:#62e5a0;--line:#22384f;--danger:#ff9d9d;--max:1200px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 0,#123852 0,transparent 30%),var(--bg);color:var(--text);font:15px/1.65 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 24px}
+.top{font-size:12px;color:var(--muted);border-bottom:1px solid var(--line);padding:8px 0}.top a{text-decoration:underline;color:#c9d7e7}
+nav{position:sticky;top:0;z-index:30;background:rgba(7,16,27,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:21px;font-weight:900;letter-spacing:.06em}.logo b{color:var(--cyan)}.navlinks{display:flex;gap:20px}.navlinks a{font-size:13px;color:#b7c7d9}.navlinks a:hover{color:white}
+.btn{display:inline-block;border-radius:10px;padding:11px 17px;background:var(--cyan);color:#04101a;font-weight:850}.btn.gold{background:var(--gold)}.btn.dark{background:transparent;border:1px solid var(--line);color:var(--text)}
+.hero{padding:90px 0 70px;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:900;color:var(--cyan)}
+h1{font-size:clamp(45px,6vw,76px);line-height:1.01;letter-spacing:-.05em;margin:14px 0 20px}.hero p{font-size:18px;color:var(--muted);max-width:720px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.heroart{height:400px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,#10273a,#08131f);display:grid;place-items:center;position:relative;overflow:hidden}.ring{width:270px;height:270px;border:1px solid #39d9ff55;border-radius:50%;position:absolute}.ring:before{content:"";position:absolute;width:10px;height:10px;background:var(--gold);border-radius:50%;left:30px;top:42px;box-shadow:0 0 20px var(--gold)}.core{width:155px;height:155px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff,#6de8ff 18%,#08789d 48%,#07101b 73%);box-shadow:0 0 75px #39d9ff66}
+section{padding:80px 0;border-top:1px solid var(--line)}.head{max-width:760px;margin-bottom:34px}.head h2{font-size:39px;line-height:1.1;margin:8px 0 12px}.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:linear-gradient(150deg,#0f2133,#0a1623);border:1px solid var(--line);border-radius:17px;padding:24px}.card h3{font-size:21px;margin:7px 0 9px}.num{font-size:11px;font-weight:900;letter-spacing:.13em;color:var(--cyan)}.goldtext{color:var(--gold)}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.pill{font-size:11px;padding:5px 9px;border:1px solid var(--line);border-radius:99px;color:#b7c7d9}
+.notice{border:1px solid #715d32;background:#17150f;border-radius:15px;padding:20px;color:#d9cba6}.risk{border-color:#5e3038;background:#1a1015;color:#e8c5ca}
+.process{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{position:relative;padding:22px 18px;background:var(--card);border:1px solid var(--line);border-radius:15px}.step .n{font-size:28px;font-weight:900;color:var(--cyan)}.step h3{margin:5px 0}
+.packages{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.pkg{padding:22px 16px;text-align:center;border:1px solid var(--line);border-radius:14px;background:var(--card)}.pkg strong{display:block;font-size:19px}.pkg small{color:var(--muted)}
+.rewards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.reward{padding:22px;background:var(--card);border:1px solid var(--line);border-radius:14px}.reward b{display:block;font-size:18px;margin-bottom:6px}
+.check{display:grid;gap:10px}.check label{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--card);display:flex;gap:11px}.barbg{height:8px;background:#16283b;border-radius:99px;margin:18px 0;overflow:hidden}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--gold));transition:.25s}
+details{border-bottom:1px solid var(--line);padding:18px 0}summary{font-weight:850;cursor:pointer}
+.linksbox{display:flex;flex-wrap:wrap;gap:10px}.linkcard{border:1px solid var(--line);background:var(--card);padding:16px 18px;border-radius:12px;min-width:210px}.linkcard:hover{border-color:#41607e}
+footer{border-top:1px solid var(--line);padding:48px 0;color:var(--muted)}.foot{display:flex;justify-content:space-between;gap:25px}
+@media(max-width:900px){.navlinks{display:none}.hero,.grid2{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.packages{grid-template-columns:1fr 1fr}.rewards{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid,.process,.packages,.rewards{grid-template-columns:1fr}.hero{padding-top:60px}.heroart{height:300px}}
+</style>
+
+<style>
+.navlinks{align-items:center;flex-wrap:wrap}
+.navlinks a:first-child{color:var(--gold);font-weight:800}
+.navlinks a:nth-child(2){color:var(--cyan);font-weight:800}
+@media(max-width:1100px){
+  .nav{height:auto;min-height:72px;padding-top:10px;padding-bottom:10px;gap:12px}
+  .navlinks{justify-content:center;gap:12px}
+  .navlinks a{font-size:12px}
+}
+@media(max-width:700px){
+  .nav{justify-content:center}
+  .logo,.nav>.btn{display:none}
+  .navlinks{width:100%;gap:8px 12px}
+}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">Independent XAB introduction by network marketer NeoLee · <a href="#xrp-guide" target="_blank" rel="noopener">Read XRP risk/reference material ↗</a></div></div>
+
+<nav>
+<div class="wrap nav">
+  <a class="logo" href="#home">NEXA<b>VAULT</b></a>
+  <div class="navlinks">
+    <a href="#gold-guide">Gold</a>
+    <a href="#xrp-guide">XRP</a>
+    <a href="#about">About</a>
+    <a href="#guides">Guides</a>
+    <a href="#process">Process</a>
+    <a href="#packages">Packages</a>
+    <a href="#rewards">Rewards</a>
+    <a href="#verify">Verify</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a class="btn" href="https://xabclub.com/signup?referer_id=NeoLee">Official Signup ↗</a>
+</div>
+</nav>
+
+<main>
+
+<section class="hero wrap" id="home">
+<div><div class="eyebrow">Gold · XRP · XAB Ecosystem Briefing</div>
+<h1>Understand the system.<br><span class="goldtext">Verify before you act.</span></h1>
+<p>NexaVault combines the educational material from our Gold/XRP knowledge hub and The Ledger briefing into one place: asset guides, the five-step process, package tiers, referral categories, risk questions and verification resources.</p>
+<div class="actions"><a class="btn" href="#xrp-guide">Explore Guides</a><a class="btn gold" href="https://xabclub.com/signup" target="_blank" rel="noopener">Open Official Signup ↗</a><a class="btn dark" href="index.html#workflow">Read Process</a></div></div>
+<div class="heroart"><div class="ring"></div><div class="core"></div></div>
+</section>
+
+<section id="about"><div class="wrap"><div class="head"><div class="eyebrow">About Us</div><h2>One place to read the ecosystem clearly.</h2><p class="muted">NexaVault is an educational and information hub. It explains the concepts and platform-presented structure without treating claims as guarantees. Verify current terms directly with the relevant official source before making decisions.</p></div>
+<div class="grid2"><div class="card"><div class="num">OUR APPROACH</div><h3>Separate facts from claims</h3><p class="muted">Use documentation, official terms and current disclosures to distinguish public information, platform-presented claims and questions that still need verification.</p></div><div class="card"><div class="num">OUR STANDARD</div><h3>Risk stays visible</h3><p class="muted">Market, technical, counterparty, regulatory and personal-responsibility risks should be considered independently. Automation can reduce manual effort; it does not remove risk.</p></div></div></div></section>
+
+<section id="guides"><div class="wrap"><div class="head"><div class="eyebrow">Reference Guides</div><h2>Gold and XRP, side by side.</h2><p class="muted">The companion guides cover the two assets referenced across the ecosystem.</p></div>
+<div class="grid2">
+<div class="card"><div class="num goldtext">AU / GOLD</div><h3>The Gold Guide</h3><p class="muted">Covers pricing behaviour, premiums over spot, ownership, custody, storage, fees and the questions worth asking before treating gold as part of an asset picture.</p><div class="pills"><span class="pill">Pricing</span><span class="pill">Premiums</span><span class="pill">Custody</span><span class="pill">Fees</span></div><br><a class="btn gold" href="#gold-guide">Read Gold Guide</a></div>
+<div class="card"><div class="num">XRP</div><h3>The XRP Guide</h3><p class="muted">Covers XRP Ledger settlement, wallet and destination behaviour, routing, permissions, custody, network checks and operational risk.</p><div class="pills"><span class="pill">XRP Ledger</span><span class="pill">Wallets</span><span class="pill">Tags / Memos</span><span class="pill">Routing</span></div><br><a class="btn" href="#xrp-guide" target="_blank" rel="noopener">Open XRP Reference ↗</a></div>
+</div></div></section>
+
+<section id="gold"><div class="wrap"><div class="head"><div class="eyebrow goldtext">Gold Guide</div><h2>Questions worth settling first.</h2></div><div class="grid">
+<div class="card"><div class="num">01</div><h3>What exactly do you own?</h3><p class="muted">Clarify whether the arrangement involves physical gold, a claim, a digital representation or another structure.</p></div>
+<div class="card"><div class="num">02</div><h3>Who holds the asset?</h3><p class="muted">Review custody, storage, insurance, audit information, access rights and recovery procedures.</p></div>
+<div class="card"><div class="num">03</div><h3>What are the costs?</h3><p class="muted">Check purchase, storage, management, transfer, delivery and withdrawal charges before committing funds.</p></div>
+</div></div></section>
+
+<section id="xrp"><div class="wrap"><div class="head"><div class="eyebrow">XRP Guide</div><h2>Follow the transaction pathway.</h2><p class="muted">Educational model only. Always verify the current route, network requirements and destination instructions.</p></div>
+<div class="process">
+<div class="step"><div class="n">01</div><h3>Wallet</h3><p class="muted">Confirm the wallet, destination and access controls.</p></div>
+<div class="step"><div class="n">02</div><h3>Venue</h3><p class="muted">Check the exchange or service, custody and withdrawal rules.</p></div>
+<div class="step"><div class="n">03</div><h3>XRP Ledger</h3><p class="muted">Verify the exact network and current network conditions.</p></div>
+<div class="step"><div class="n">04</div><h3>Destination</h3><p class="muted">Confirm address format and destination tag/memo requirements.</p></div>
+<div class="step"><div class="n">05</div><h3>Review</h3><p class="muted">Record the details and reassess before repeating a transaction.</p></div>
+</div><div class="notice" style="margin-top:20px"><b>Never share a seed phrase or private key.</b> A website, support agent or referral representative should not need your wallet's secret recovery credentials.</div></div></section>
+
+<section id="process"><div class="wrap"><div class="head"><div class="eyebrow">Entry 03 · How It Runs</div><h2>Five stages, in order, every cycle.</h2><p class="muted">The briefing describes a five-step cycle for an XRP-focused system. These descriptions represent the system as presented and are not a guarantee of execution or results.</p></div>
+<div class="process">
+<div class="step"><div class="n">01</div><h3>Scan</h3><p class="muted">Connected sources are checked for current XRP market conditions and short-lived pricing gaps.</p><div class="pills"><span class="pill">Markets</span><span class="pill">Signals</span><span class="pill">Availability</span></div></div>
+<div class="step"><div class="n">02</div><h3>Compare</h3><p class="muted">The same asset is checked across markets; a visible gap is not automatically a usable opportunity.</p><div class="pills"><span class="pill">Same asset</span><span class="pill">Cross-market</span><span class="pill">Timing</span></div></div>
+<div class="step"><div class="n">03</div><h3>Validate</h3><p class="muted">Fees, liquidity, slippage, network load and exchange uptime are considered.</p><div class="pills"><span class="pill">Fees</span><span class="pill">Liquidity</span><span class="pill">Slippage</span></div></div>
+<div class="step"><div class="n">04</div><h3>Execute</h3><p class="muted">Action is described as occurring when current conditions, package terms and system rules line up.</p><div class="pills"><span class="pill">Rules</span><span class="pill">Eligibility</span><span class="pill">Discipline</span></div></div>
+<div class="step"><div class="n">05</div><h3>Review</h3><p class="muted">Each cycle is reassessed; a previous result does not promise a future result.</p><div class="pills"><span class="pill">Results</span><span class="pill">Limits</span><span class="pill">Next review</span></div></div>
+</div></div></section>
+
+<section id="packages"><div class="wrap"><div class="head"><div class="eyebrow">Entry 04 · Package Path</div><h2>Five tiers. Pick by fit, not by size.</h2><p class="muted">The briefing lists five package names. It also states that a larger package is not a guarantee of a better outcome and that rates, fees and renewal terms can change.</p></div>
+<div class="packages"><div class="pkg"><div class="num">TIER 01</div><strong>Basic</strong><small>Starting point to review</small></div><div class="pkg"><div class="num">TIER 02</div><strong>Eco</strong><small>Compare resources and fees</small></div><div class="pkg"><div class="num">TIER 03</div><strong>Turbo</strong><small>Suitability matters</small></div><div class="pkg"><div class="num">TIER 04</div><strong>Hyper</strong><small>Check renewal rules</small></div><div class="pkg"><div class="num">TIER 05</div><strong>Tycoon</strong><small>Not a guarantee</small></div></div>
+<div class="notice" style="margin-top:18px"><b>Before selecting a tier:</b> compare the current official fees, eligibility rules, renewal conditions, resource allocation and your own risk tolerance. Higher is not automatically better.</div></div></section>
+
+<section id="rewards"><div class="wrap"><div class="head"><div class="eyebrow">Entry 05 · Affiliate Structure</div><h2>Four referral categories described in the briefing.</h2><p class="muted">These categories depend on qualification and activity rules in the official plan. They are not automatic or guaranteed earnings.</p></div>
+<div class="rewards"><div class="reward"><div class="num">DIRECT</div><b>Direct bonus</b><span class="muted">Described as tied to referrals brought in directly under qualification rules.</span></div>
+<div class="reward"><div class="num">LEVEL</div><b>Level income</b><span class="muted">Described as income across defined levels beneath a member, subject to activity conditions.</span></div>
+<div class="reward"><div class="num">TEAM</div><b>Team bonus</b><span class="muted">Described as dependent on how the wider team structure is defined in the official model.</span></div>
+<div class="reward"><div class="num">RENEWAL</div><b>Renewal bonus</b><span class="muted">Described as tied to renewal conditions and current package requirements.</span></div></div></div></section>
+
+<section id="verify"><div class="wrap"><div class="head"><div class="eyebrow">Verification</div><h2>Before you activate, check five things.</h2></div>
+<div class="check">
+<label><input type="checkbox"> I verified the official domain and current terms.</label>
+<label><input type="checkbox"> I understand the package, fees and eligibility rules.</label>
+<label><input type="checkbox"> I understand who controls assets and withdrawals.</label>
+<label><input type="checkbox"> I reviewed market, technical, counterparty and regulatory risks.</label>
+<label><input type="checkbox"> I will never share a seed phrase or private key.</label>
+</div><div class="barbg"><div class="bar"></div></div><p id="count" class="muted">0 of 5 checks completed</p></div></section>
+
+<section id="sessions"><div class="wrap"><div class="head"><div class="eyebrow">Entry 06 · Before You Activate</div><h2>Review official material first.</h2><p class="muted">The Ledger briefing recommends attending official sessions that cover process, packages, payouts and current risk disclosures. Check the official source for current availability and languages.</p></div><div class="linksbox">
+<a class="linkcard" href="https://xabclub.com/" target="_blank" rel="noopener"><b>Official XAB Club</b><br><span class="muted">Open official site ↗</span></a>
+<a class="linkcard" href="https://xabclub.com/signup" target="_blank" rel="noopener"><b>Official Signup</b><br><span class="muted">Create account ↗</span></a>
+<a class="linkcard" href="#xrp-guide" target="_blank" rel="noopener"><b>XRP Reference</b><br><span class="muted">Open reference ↗</span></a>
+</div></div></section>
+
+<section id="risk"><div class="wrap"><div class="head"><div class="eyebrow">Entry 07 · Risk</div><h2>Automation lowers effort. It doesn't lower risk.</h2></div><div class="grid"><div class="card"><div class="num">MARKET</div><h3>Market risk</h3><p class="muted">Prices, liquidity, spreads and market conditions can change quickly.</p></div><div class="card"><div class="num">TECHNICAL</div><h3>Technical risk</h3><p class="muted">Networks, wallets, exchanges, interfaces and automation can experience errors or outages.</p></div><div class="card"><div class="num">COUNTERPARTY</div><h3>Counterparty risk</h3><p class="muted">A service provider's policies, custody model and operational decisions matter.</p></div><div class="card"><div class="num">REGULATORY</div><h3>Regulatory risk</h3><p class="muted">Rules and availability can differ by jurisdiction and can change over time.</p></div><div class="card"><div class="num">PERSONAL</div><h3>Personal responsibility</h3><p class="muted">Read the current terms and make decisions based on your own circumstances and risk tolerance.</p></div></div>
+<div class="notice risk" style="margin-top:20px"><b>Important:</b> Nothing on this website is financial, legal or tax advice. Package tiers, rates, fees, referral terms and eligibility can change. No package, automation or referral category guarantees profit or earnings.</div></div></section>
+
+<section id="faq"><div class="wrap"><div class="head"><div class="eyebrow">Entry 08 · FAQ</div><h2>Questions worth settling first.</h2></div>
+<details><summary>What is XAB Club, in plain terms?</summary><p class="muted">The Ledger briefing describes it as a structured XRP-focused system built around market scanning, automation, package tiers, member perks and education, based on promotional material.</p></details>
+<details><summary>Does automation guarantee profit?</summary><p class="muted">No. Automation may reduce manual work, but it does not remove market risk or guarantee an outcome.</p></details>
+<details><summary>Which package should I pick?</summary><p class="muted">Review your resources, current fees, eligibility rules, renewal conditions and risk tolerance. A higher tier is not automatically better.</p></details>
+<details><summary>Are affiliate bonuses guaranteed?</summary><p class="muted">No. The briefing states that they depend on qualification, activity and the current plan rules.</p></details>
+<details><summary>Where should I get current numbers?</summary><p class="muted">Directly from XAB Club's official channels and current terms. Information on an independent briefing page can become outdated.</p></details>
+</div></section>
+
+<section id="links"><div class="wrap"><div class="head"><div class="eyebrow">All Important Links</div><h2>Everything in one place.</h2></div>
+<div class="linksbox">
+<a class="linkcard" href="https://xabclub.com/" target="_blank" rel="noopener"><b>XAB Club</b><br><span class="muted">Official website ↗</span></a>
+<a class="linkcard" href="https://xabclub.com/signup" target="_blank" rel="noopener"><b>XAB Club Signup</b><br><span class="muted">Official signup ↗</span></a>
+<a class="linkcard" href="#xrp-guide" target="_blank" rel="noopener"><b>NeoLee XRP Reference</b><br><span class="muted">XRP guide / risk reference ↗</span></a>
+<a class="linkcard" href="mailto:neoleew3@gmail.com"><b>Contact NeoLee</b><br><span class="muted">neoleew3@gmail.com</span></a>
+</div>
+<p class="muted" style="margin-top:20px">The original NexaVault and The Ledger pages also contain internal section links for Guides, Process, Packages, Rewards, FAQ, About, Verify and Risk. Those sections are consolidated above rather than duplicated.</p>
+</div></section>
+
+<section id="gold-guide" class="gold-section" style="padding:0;border-top:1px solid #22384f">
+<section class="hero wrap"><div><div class="eyebrow">XAB knowledge hub / Gold guide</div><h1>Understand gold beyond the headline quote.</h1><p>Learn how source, purity, custody, premiums and execution connect. Use this compact guide to compare gold structures without treating a reference price as a complete cost.</p><div class="actions"><a class="btn gold" href="#guide">Explore Guide</a><a class="btn dark" href="#xrp-guide">Open XRP Guide</a></div></div><div class="visual"><div class="orb"></div></div></section>
+<section id="gold-guide-content"><div class="wrap"><div class="head"><div class="eyebrow">Interactive ecosystem</div><h2>Follow gold from source to execution.</h2><p class="muted">Select a stage to reveal the research questions and terms that matter within that part of the market.</p></div>
+<div class="steps">
+<div class="step"><div class="n">01</div><h3>Source & production</h3><p class="muted">Research where supply enters the system, how production data is reported, and which costs or jurisdictions shape availability.</p></div>
+<div class="step"><div class="n">02</div><h3>Refining & standards</h3><p class="muted">Review purity, form, unit and standards before comparing products or claims.</p></div>
+<div class="step"><div class="n">03</div><h3>Vaulting & custody</h3><p class="muted">Map legal ownership, insurance, access, redemption conditions and provider exposure.</p></div>
+<div class="step"><div class="n">04</div><h3>Market & execution</h3><p class="muted">Connect a reference quote to currency, timestamp, venue, premium, spread, tax and exit cost.</p></div>
+</div></div></section>
+<section><div class="wrap"><div class="head"><div class="eyebrow">Gold pathway</div><h2>Follow the questions from material to ownership.</h2></div><div class="grid">
+<div class="card"><div class="num">AU / 01</div><h3>Product definition</h3><p class="muted">A bar, coin, fund, futures contract and tokenised claim have different ownership, pricing and redemption structures.</p></div>
+<div class="card"><div class="num">AU / 02</div><h3>Quote context</h3><p class="muted">Check currency, timestamp, venue, premium, spread, tax, delivery and storage before comparing offers.</p></div>
+<div class="card"><div class="num">AU / 03</div><h3>Custody and exit</h3><p class="muted">Document legal ownership, insurance, access, redemption conditions and what happens if a provider or venue fails.</p></div>
+</div></div></section>
+<section><div class="wrap"><div class="head"><div class="eyebrow">Illustrative cost lab</div><h2>See how market friction changes cost.</h2><p class="muted">Arithmetic for education, not a live quote or price forecast.</p></div>
+<div class="lab"><div class="controls">
+<div class="control"><label>Reference quote</label><input id="q" type="number" value="2400"></div>
+<div class="control"><label>Illustrative premium %</label><input id="p" type="number" value="3" step=".1"></div>
+<div class="control"><label>Annual storage %</label><input id="s" type="number" value=".8" step=".1"></div></div>
+<div class="result"><div class="card"><div class="muted">Acquisition example</div><div class="big" id="a"></div></div><div class="card"><div class="muted">Annual storage example</div><div class="big" id="st"></div></div><div class="card"><div class="muted">Difference from quote</div><div class="big" id="d"></div></div></div>
+<p class="muted">Actual quotes, premiums, spreads, taxes, insurance and storage terms vary by venue, product and jurisdiction.</p></div></div></section>
+<section><div class="wrap"><div class="head"><div class="eyebrow">Gold review checklist</div><h2>Before relying on a gold claim.</h2></div><div class="grid2">
+<div class="card"><div class="num">01</div><h3>Name the product</h3><p class="muted">Physical bar, coin, fund, futures contract, token or other exposure are not interchangeable.</p></div>
+<div class="card"><div class="num">02</div><h3>Verify the quote</h3><p class="muted">Check source, currency, timestamp, unit and whether the figure is executable.</p></div>
+<div class="card"><div class="num">03</div><h3>Map all friction</h3><p class="muted">Include spread, premium, tax, settlement, insurance, storage and exit conditions.</p></div>
+<div class="card"><div class="num">04</div><h3>Review custody</h3><p class="muted">Understand legal ownership, access, redemption and counterparty failure paths.</p></div>
+</div></div></section>
+<script>
+function calc(){let q=+document.getElementById('q').value||0,p=(+document.getElementById('p').value||0)/100,s=(+document.getElementById('s').value||0)/100,a=q*(1+p);document.getElementById('a').textContent=a.toLocaleString('en-US',{style:'currency',currency:'USD'});document.getElementById('st').textContent=(a*s).toLocaleString('en-US',{style:'currency',currency:'USD'});document.getElementById('d').textContent=(a-q).toLocaleString('en-US',{style:'currency',currency:'USD'})}
+document.querySelectorAll('input').forEach(x=>x.addEventListener('input',calc));calc();
+</script>
+
+</section>
+<section id="xrp-guide" class="xrp-section" style="padding:0;border-top:1px solid #22384f">
+<section class="hero wrap"><div><div class="eyebrow">XAB knowledge hub / XRP guide</div><h1>Explore the layers behind XRP participation.</h1><p>Separate network utility from market outcomes, review an XRP transaction path and use a permission checklist before interacting with wallets, venues or third-party services.</p><div class="actions"><a class="btn " href="#guide">Explore Guide</a><a class="btn dark" href="#gold-guide">Open Gold Guide</a></div></div><div class="visual"><div class="orb"></div></div></section>
+<section id="xrp-guide-content"><div class="wrap"><div class="head"><div class="eyebrow">XRP transaction guide</div><h2>Trace an illustrative payment pathway.</h2><p class="muted">This simplified visual is not a representation of a specific transaction, service promise or guaranteed settlement path.</p></div>
+<div class="steps">
+<div class="step"><div class="n">01</div><h3>Wallet</h3><p class="muted">Confirm the wallet, destination and access controls.</p></div>
+<div class="step"><div class="n">02</div><h3>Venue</h3><p class="muted">Check the exchange or service, custody and withdrawal rules.</p></div>
+<div class="step"><div class="n">03</div><h3>XRP Ledger</h3><p class="muted">Verify the exact network and current network conditions.</p></div>
+<div class="step"><div class="n">04</div><h3>Destination</h3><p class="muted">Confirm address format and destination tag/memo requirements.</p></div>
+</div></div></section>
+<section><div class="wrap"><div class="head"><div class="eyebrow">Network review</div><h2>Trace responsibility across the whole route.</h2></div><div class="grid">
+<div class="card"><div class="num">X / 01</div><h3>Network details</h3><p class="muted">Confirm the exact asset, network and destination fields. Verify official documentation, address format, tags or memos, fees and current network conditions.</p></div>
+<div class="card"><div class="num">X / 02</div><h3>Venue and custody</h3><p class="muted">Understand which party controls access at every step. Review withdrawal permissions, custody terms, recovery options, device security and counterparty exposure.</p></div>
+<div class="card"><div class="num">X / 03</div><h3>Operational control</h3><p class="muted">Plan for delays, errors and support limitations. Keep the records needed for support, security and future review.</p></div>
+</div></div></section>
+<section><div class="wrap"><div class="head"><div class="eyebrow">Permission and custody check</div><h2>Review before you connect or sign.</h2><p class="muted">Completing this checklist does not make a wallet, platform or transaction safe.</p></div>
+<div class="check"><label><input type="checkbox"> I verified the exact official domain or application source.</label><label><input type="checkbox"> I understand what permissions or signatures are being requested.</label><label><input type="checkbox"> I reviewed custody, recovery and withdrawal conditions.</label><label><input type="checkbox"> I checked fees, network conditions and counterparty exposure.</label><label><input type="checkbox"> I will never disclose a seed phrase or private key.</label></div><p class="muted" id="count">0 of 5 review points completed</p></div></section>
+<section><div class="wrap"><div class="head"><div class="eyebrow">Four-layer network review</div><h2>Separate technology from market narrative.</h2></div><div class="grid">
+<div class="card"><div class="num">N</div><h3>Network layer</h3><p class="muted">Review documentation, transaction mechanics, network conditions and what the technology actually does.</p></div>
+<div class="card"><div class="num">V</div><h3>Venue layer</h3><p class="muted">Check liquidity, access, spreads, withdrawal terms, jurisdiction and counterparty exposure.</p></div>
+<div class="card"><div class="num">C</div><h3>Custody layer</h3><p class="muted">Understand keys, wallet permissions, backups, recovery, device security and third-party custody terms.</p></div>
+<div class="card"><div class="num">L</div><h3>Legal layer</h3><p class="muted">Verify current local treatment, service eligibility, taxes and regulatory uncertainty with qualified sources.</p></div>
+<div class="card"><div class="num">O</div><h3>Operational layer</h3><p class="muted">Model outages, delays, errors, destination-tag mistakes and support limitations.</p></div>
+<div class="card"><div class="num">P</div><h3>Personal layer</h3><p class="muted">Define exposure, security habits, time horizon and what loss or inaccessibility would mean for you.</p></div>
+</div></div></section>
+<section><div class="wrap"><div class="head"><div class="eyebrow">XRP review sequence</div><h2>A disciplined path before interaction.</h2></div><div class="grid">
+<div class="card"><div class="num">01</div><h3>Identify</h3><p class="muted">Confirm the exact network, asset, venue, wallet and destination details.</p></div>
+<div class="card"><div class="num">02</div><h3>Verify</h3><p class="muted">Use official sources to confirm permissions, tags, fees and current conditions.</p></div>
+<div class="card"><div class="num">03</div><h3>Test</h3><p class="muted">Where appropriate, use a controlled small test and verify receipt before proceeding.</p></div>
+<div class="card"><div class="num">04</div><h3>Record</h3><p class="muted">Keep documentation needed for security, support, tax and future review.</p></div>
+</div></div></section>
+<script>
+const checks=[...document.querySelectorAll('.check input')],count=document.getElementById('count');function update(){count.textContent=checks.filter(x=>x.checked).length+' of 5 review points completed'}checks.forEach(x=>x.addEventListener('change',update));
+</script>
+
+</section>
+</main>
+
+<footer><div class="wrap foot"><div><div class="logo">NEXA<b>VAULT</b></div><div>Gold · XRP · XAB educational briefing</div></div><div>© 2026 NexaVault · Verify official terms · Crypto involves risk</div></div></footer>
+<script>
+const inputs=[...document.querySelectorAll('.check input')],bar=document.querySelector('.bar'),count=document.querySelector('#count');
+function update(){const n=inputs.filter(x=>x.checked).length;bar.style.width=(n/5*100)+'%';count.textContent=n+' of 5 checks completed'}
+inputs.forEach(i=>i.addEventListener('change',update));
+</script>
+</body>
+</html>
